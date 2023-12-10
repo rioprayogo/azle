@@ -1,0 +1,32 @@
+// Contoh sederhana menggunakan JavaScript untuk ilustrasi
+
+// Fungsi untuk menyimpan data pengguna pada beberapa node
+function simpanDataPengguna(nama, email) {
+    // Proses enkripsi data (hanya contoh, tidak sebenarnya mengenkripsi di sini)
+    let dataPengguna = {
+        nama: nama,
+        email: email,
+        // ...informasi pengguna lainnya
+    };
+
+    // Simpan data terenkripsi pada beberapa node di Internet Computer
+    let node1 = simpanDataKeNode(dataPengguna);
+    let node2 = simpanDataKeNode(dataPengguna);
+    let node3 = simpanDataKeNode(dataPengguna);
+
+    // Mengembalikan informasi node tempat data disimpan (hanya untuk ilustrasi)
+    return [node1, node2, node3];
+}
+
+// Fungsi untuk mengambil data pengguna dari beberapa node
+function ambilDataPengguna() {
+    // Ambil potongan data dari beberapa node
+    let potonganDataNode1 = ambilDataDariNode(node1);
+    let potonganDataNode2 = ambilDataDariNode(node2);
+    let potonganDataNode3 = ambilDataDariNode(node3);
+
+    // Gabungkan potongan data untuk mendapatkan informasi pengguna
+    let dataPengguna = gabungkanData(potonganDataNode1, potonganDataNode2, potonganDataNode3);
+
+    return dataPengguna;
+}
